@@ -5,10 +5,11 @@ import asyncio
 import pandas as pd
 
 geolocator = Nominatim(user_agent="spain-graph-navigator")
-upload_path = "D:/MyNameIsSid/Notes And Lectures/AI Projects/spain-graph-navigator/Dataset/"
+upload_path = "UPLOAD_PATH"
+country = "Spain"
 
 def sync_geocode(city):
-    result = geolocator.geocode(city+", Spain")
+    result = geolocator.geocode(city+", "+country)
     if asyncio.iscoroutine(result):
         return asyncio.run(result)   # force coroutine to resolve
     return result
