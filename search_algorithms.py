@@ -1,7 +1,6 @@
 from collections import deque
 import numpy as np
 import heapq
-import data_extraction as de
 class PriorityQueue:
     def __init__(self):
         self._heap = []
@@ -80,11 +79,11 @@ def uniform_cost_search_path(graph, start, destination):
                 print(f"Highest priority in frontier: {frontier.peek()}")
     return None
 
-def astar_search_path(graph, start, destination):
+def astar_search_path(graph, start, destination, cities):
     print(f"Evaluating the path from {start} to {destination} Using A*!!\n")
     frontier = PriorityQueue()
     # Store tuples of (vertex, path, cost) in the priority queue. The priority is the cost to reach the vertex (g) + the heuristic estimate (h).
-    frontier.push((start, [start], 0), 0 + heuristic(de.cities_of_spain[start], de.cities_of_spain[destination]))
+    frontier.push((start, [start], 0), 0 + heuristic(cities[start], cities[destination]))
 
     # Dictionary to store the minimum cost found so far to reach each node.
     visited_distance = {start: 0}
@@ -126,7 +125,7 @@ def astar_search_path(graph, start, destination):
                 visited_distance[neighbor] = new_distance
                 next_path = [*path, neighbor]
                 # The priority for A* is g + h
-                f_cost = new_distance + heuristic(de.cities_of_spain[neighbor], de.cities_of_spain[destination])
+                f_cost = new_distance + heuristic(cities[neighbor], cities[destination])
                 frontier.push((neighbor, next_path, new_distance), f_cost)
                 print(f"Adding/Updating neighbor: {neighbor} with new cost (g): {new_distance}, f-cost: {round(f_cost,2)}")
                 print(f"Highest priority in frontier: {frontier.peek()}")

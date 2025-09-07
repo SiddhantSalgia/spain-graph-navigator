@@ -1,0 +1,132 @@
+neighbours:
+[('Barcelona', 'Valencia', 325), ('Barcelona', 'Zaragoza', 309), ('Pamplona', 'Zaragoza', 177), ('Pamplona', 'Bilbao', 158), ('Madrid', 'Toledo', 75), ('Madrid', 'Cuenca', 173), ('Madrid', 'Zaragoza', 314), ('Madrid', 'Valladolid', 207), ('Granada', 'Córdoba', 200), ('Granada', 'Albacete', 341), ('Granada', 'Murcia', 279), ('León', 'Salamanca', 206), ('León', 'Valladolid', 140), ('León', 'Burgos', 171), ('Seville', 'Córdoba', 139), ('Seville', 'Badajoz', 212), ('Valencia', 'Cuenca', 202), ('Valencia', 'Zaragoza', 315), ('Valencia', 'Albacete', 192), ('Valencia', 'Murcia', 220), ('Salamanca', 'Toledo', 284), ('Salamanca', 'Valladolid', 119), ('Salamanca', 'Cáceres', 207), ('Toledo', 'Cuenca', 183), ('Toledo', 'Córdoba', 343), ('Toledo', 'Badajoz', 364), ('Cuenca', 'Albacete', 164), ('Zaragoza', 'Logroño', 167), ('Valladolid', 'Burgos', 131), ('Valladolid', 'Logroño', 139), ('Albacete', 'Murcia', 154), ('Cáceres', 'Badajoz', 94), ('Burgos', 'Logroño', 135)]
+
+Enter the Start City: Barcelona
+Enter Destination: Madrid
+
+Evaluating the path from Barcelona to Madrid Using UCS!!
+
+Iteration: 1
+Frontier : ('Barcelona', ['Barcelona'], 0)
+Exploring node: Barcelona with cost: 0
+Adding/Updating neighbour: Valencia with new cost: 325
+Highest priority in frontier: ('Valencia', ['Barcelona', 'Valencia'], 325)
+Adding/Updating neighbour: Zaragoza with new cost: 309
+Highest priority in frontier: ('Zaragoza', ['Barcelona', 'Zaragoza'], 309)
+
+
+Iteration: 2
+Frontier : ('Zaragoza', ['Barcelona', 'Zaragoza'], 309)
+Exploring node: Zaragoza with cost: 309
+Adding/Updating neighbour: Pamplona with new cost: 486
+Highest priority in frontier: ('Valencia', ['Barcelona', 'Valencia'], 325)
+Adding/Updating neighbour: Madrid with new cost: 623
+Highest priority in frontier: ('Valencia', ['Barcelona', 'Valencia'], 325)
+Adding/Updating neighbour: Logroño with new cost: 476
+Highest priority in frontier: ('Valencia', ['Barcelona', 'Valencia'], 325)
+
+
+Iteration: 3
+Frontier : ('Valencia', ['Barcelona', 'Valencia'], 325)
+Exploring node: Valencia with cost: 325
+Adding/Updating neighbour: Cuenca with new cost: 527
+Highest priority in frontier: ('Logroño', ['Barcelona', 'Zaragoza', 'Logroño'], 476)
+Adding/Updating neighbour: Albacete with new cost: 517
+Highest priority in frontier: ('Logroño', ['Barcelona', 'Zaragoza', 'Logroño'], 476)
+Adding/Updating neighbour: Murcia with new cost: 545
+Highest priority in frontier: ('Logroño', ['Barcelona', 'Zaragoza', 'Logroño'], 476)
+
+
+Iteration: 4
+Frontier : ('Logroño', ['Barcelona', 'Zaragoza', 'Logroño'], 476)
+Exploring node: Logroño with cost: 476
+Adding/Updating neighbour: Valladolid with new cost: 615
+Highest priority in frontier: ('Pamplona', ['Barcelona', 'Zaragoza', 'Pamplona'], 486)
+Adding/Updating neighbour: Burgos with new cost: 611
+Highest priority in frontier: ('Pamplona', ['Barcelona', 'Zaragoza', 'Pamplona'], 486)
+
+
+Iteration: 5
+Frontier : ('Pamplona', ['Barcelona', 'Zaragoza', 'Pamplona'], 486)
+Exploring node: Pamplona with cost: 486
+Adding/Updating neighbour: Bilbao with new cost: 644
+Highest priority in frontier: ('Albacete', ['Barcelona', 'Valencia', 'Albacete'], 517)
+
+
+Iteration: 6
+Frontier : ('Albacete', ['Barcelona', 'Valencia', 'Albacete'], 517)
+Exploring node: Albacete with cost: 517
+Adding/Updating neighbour: Granada with new cost: 858
+Highest priority in frontier: ('Cuenca', ['Barcelona', 'Valencia', 'Cuenca'], 527)
+
+
+Iteration: 7
+Frontier : ('Cuenca', ['Barcelona', 'Valencia', 'Cuenca'], 527)
+Exploring node: Cuenca with cost: 527
+Adding/Updating neighbour: Toledo with new cost: 710
+Highest priority in frontier: ('Murcia', ['Barcelona', 'Valencia', 'Murcia'], 545)
+
+
+Iteration: 8
+Frontier : ('Murcia', ['Barcelona', 'Valencia', 'Murcia'], 545)
+Exploring node: Murcia with cost: 545
+Adding/Updating neighbour: Granada with new cost: 824
+Highest priority in frontier: ('Burgos', ['Barcelona', 'Zaragoza', 'Logroño', 'Burgos'], 611)
+
+
+Iteration: 9
+Frontier : ('Burgos', ['Barcelona', 'Zaragoza', 'Logroño', 'Burgos'], 611)
+Exploring node: Burgos with cost: 611
+Adding/Updating neighbour: León with new cost: 782
+Highest priority in frontier: ('Valladolid', ['Barcelona', 'Zaragoza', 'Logroño', 'Valladolid'], 615)
+
+
+Iteration: 10
+Frontier : ('Valladolid', ['Barcelona', 'Zaragoza', 'Logroño', 'Valladolid'], 615)
+Exploring node: Valladolid with cost: 615
+Adding/Updating neighbour: León with new cost: 755
+Highest priority in frontier: ('Madrid', ['Barcelona', 'Zaragoza', 'Madrid'], 623)
+Adding/Updating neighbour: Salamanca with new cost: 734
+Highest priority in frontier: ('Madrid', ['Barcelona', 'Zaragoza', 'Madrid'], 623)
+
+
+Iteration: 11
+Frontier : ('Madrid', ['Barcelona', 'Zaragoza', 'Madrid'], 623)
+Exploring node: Madrid with cost: 623
+
+Path determined by UCS from Barcelona to Madrid is ['Barcelona', 'Zaragoza', 'Madrid'] in 11 iterations and the total distance is 623
+
+
+Evaluating the path from Barcelona to Madrid Using A*!!
+
+
+Iteration: 1
+Frontier : ('Barcelona', ['Barcelona'], 0)
+Exploring node: Barcelona with cost: 0
+Adding/Updating neighbor: Valencia with new cost (g): 325, f-cost: 627.34
+Highest priority in frontier: ('Valencia', ['Barcelona', 'Valencia'], 325)
+Adding/Updating neighbor: Zaragoza with new cost (g): 309, f-cost: 585.91
+Highest priority in frontier: ('Zaragoza', ['Barcelona', 'Zaragoza'], 309)
+
+
+Iteration: 2
+Frontier : ('Zaragoza', ['Barcelona', 'Zaragoza'], 309)
+Exploring node: Zaragoza with cost: 309
+Adding/Updating neighbor: Pamplona with new cost (g): 486, f-cost: 804.89
+Highest priority in frontier: ('Valencia', ['Barcelona', 'Valencia'], 325)
+Adding/Updating neighbor: Madrid with new cost (g): 623, f-cost: 623.0
+Highest priority in frontier: ('Madrid', ['Barcelona', 'Zaragoza', 'Madrid'], 623)
+Adding/Updating neighbor: Logroño with new cost (g): 476, f-cost: 728.04
+Highest priority in frontier: ('Madrid', ['Barcelona', 'Zaragoza', 'Madrid'], 623)
+
+
+Iteration: 3
+Frontier : ('Madrid', ['Barcelona', 'Zaragoza', 'Madrid'], 623)
+Exploring node: Madrid with cost: 623
+
+Path determined by A* from Barcelona to Madrid is ['Barcelona', 'Zaragoza', 'Madrid'] in 3 iterations and the total distance is 623
+
+
+  Algorithm  Path Distance (in km)  Nodes Expanded  Runtime (in ms)
+0       UCS                    623              11         0.008959
+1        A*                    623               3         0.002845
