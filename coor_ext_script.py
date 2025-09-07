@@ -1,12 +1,11 @@
 from geopy.geocoders import Nominatim
-from meteostat import Point, Daily, Stations
 import time
 import asyncio
 import pandas as pd
 
 geolocator = Nominatim(user_agent="spain-graph-navigator")
 upload_path = "UPLOAD_PATH"
-country = "Spain"
+country = "Spain" 
 
 def sync_geocode(city):
     result = geolocator.geocode(city+", "+country)
