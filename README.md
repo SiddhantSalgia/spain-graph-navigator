@@ -1,9 +1,22 @@
 # spain-graph-navigator
-An end-to-end implementation of path finding on a map of Spain - represented in the form of a graph - using UCS and A* algorithms. 
 
-The objective is to compare both Uniform Cost Search and A* Search algorithms in terms of accuracy, efficiency, and computational performance. 
-UCS, also known as Dijkstra’s algorithm, guarantees an optimal solution by expanding nodes based solely on the lowest path cost. A* Search builds on this principle by including a heuristic function to guide the search, potentially reducing the number of nodes expanded.
-Implementation has been done in a Jupiter Notebook environment using a self-constructed dataset of Spanish cities and distances. 
-Both algorithms generated the same optimal path and cost, confirming their correctness. However, A* demonstrated better efficiency, solving with fewer node expansions and reduced computational effort as compared to UCS.
+A simple AI agent code was implemented, where an agent navigates between Spanish cities using graph-based search algorithms.
 
-This comparison shows how different AI search strategies can affect problem-solving effectiveness, shedding light on the practical selection of algorithms for real-world optimisation problems.
+Features:
+- Represents 20 Spanish cities as nodes in a graph.
+- Uses geopy + Nominatim to fetch latitudes and longitudes.
+- Implements Informed Search algorithms for path finding (Uniform Cost   Search and A*).
+- Visualize the graph of cities with lat-long converted to Cartesian coordinates.
+
+Dataset:
+- Correlation matrix, which stores distances between cities.
+- Coordinates(lat-long), which are fetched using geopy.
+
+Technologies Used:
+- Python
+- Matplotlib
+- Geopy
+
+Author:
+Siddhant Salgia
+Masters of Artificial Intelligence - University of Technology Sydney (2027)
