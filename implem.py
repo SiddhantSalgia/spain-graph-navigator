@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import json
 
-path = "D:/MyNameIsSid/Notes And Lectures/AI Projects/spain-graph-navigator/Dataset/"
+path = "/Dataset/"
 
 def get_Path(file_name):
   return str(path+file_name)
@@ -58,7 +58,6 @@ def construct_graph(cities_of_spain,neighbours):
     # Display the graph
     plt.show()
     print("\n")
-    print(spain_map)
     return spain_map
 
 def main():
@@ -72,8 +71,7 @@ def main():
 
     cities_of_spain = convert_degrees_to_km(cities_of_spain)
     city_data = pd.DataFrame(cities_of_spain).T
-    city_data.columns = ["X-Coordinate","Y-Coordinate"]
-    print(cities_of_spain)
+    city_data.columns = ["X-Coordinate", "Y-Coordinate"]
     print("\n")
 
     neighbours = []
@@ -85,7 +83,6 @@ def main():
             if j > i and x.iloc[j] != 0:
                 temp_tuple = (relation_key, dist_matrix.columns[j], int(x.iloc[j]))
                 neighbours.append(temp_tuple)
-    print(neighbours)
 
     spain_map = construct_graph(cities_of_spain,neighbours)
     graph = spain_map
