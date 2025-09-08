@@ -1,0 +1,240 @@
+{
+    "Barcelona": {
+        "Valencia": {
+            "distance": 325
+        },
+        "Zaragoza": {
+            "distance": 309
+        }
+    },
+    "Valencia": {
+        "Barcelona": {
+            "distance": 325
+        },
+        "Cuenca": {
+            "distance": 202
+        },
+        "Zaragoza": {
+            "distance": 315
+        },
+        "Albacete": {
+            "distance": 192
+        },
+        "Murcia": {
+            "distance": 220
+        }
+    },
+    "Zaragoza": {
+        "Barcelona": {
+            "distance": 309
+        },
+        "Pamplona": {
+            "distance": 177
+        },
+        "Madrid": {
+            "distance": 314
+        },
+        "Valencia": {
+            "distance": 315
+        },
+        "Logrono": {
+            "distance": 167
+        }
+    },
+    "Pamplona": {
+        "Zaragoza": {
+            "distance": 177
+        },
+        "Bilbao": {
+            "distance": 158
+        }
+    },
+    "Bilbao": {
+        "Pamplona": {
+            "distance": 158
+        }
+    },
+    "Madrid": {
+        "Toledo": {
+            "distance": 75
+        },
+        "Cuenca": {
+            "distance": 173
+        },
+        "Zaragoza": {
+            "distance": 314
+        },
+        "Valladolid": {
+            "distance": 207
+        }
+    },
+    "Toledo": {
+        "Madrid": {
+            "distance": 75
+        },
+        "Salamanca": {
+            "distance": 284
+        },
+        "Cuenca": {
+            "distance": 183
+        },
+        "Cordoba": {
+            "distance": 343
+        },
+        "Badajoz": {
+            "distance": 364
+        }
+    },
+    "Cuenca": {
+        "Madrid": {
+            "distance": 173
+        },
+        "Valencia": {
+            "distance": 202
+        },
+        "Toledo": {
+            "distance": 183
+        },
+        "Albacete": {
+            "distance": 164
+        }
+    },
+    "Valladolid": {
+        "Madrid": {
+            "distance": 207
+        },
+        "Leon": {
+            "distance": 140
+        },
+        "Salamanca": {
+            "distance": 119
+        },
+        "Burgos": {
+            "distance": 131
+        },
+        "Logrono": {
+            "distance": 139
+        }
+    },
+    "Granada": {
+        "Cordoba": {
+            "distance": 200
+        },
+        "Albacete": {
+            "distance": 341
+        },
+        "Murcia": {
+            "distance": 279
+        }
+    },
+    "Cordoba": {
+        "Granada": {
+            "distance": 200
+        },
+        "Seville": {
+            "distance": 139
+        },
+        "Toledo": {
+            "distance": 343
+        }
+    },
+    "Albacete": {
+        "Granada": {
+            "distance": 341
+        },
+        "Valencia": {
+            "distance": 192
+        },
+        "Cuenca": {
+            "distance": 164
+        },
+        "Murcia": {
+            "distance": 154
+        }
+    },
+    "Murcia": {
+        "Granada": {
+            "distance": 279
+        },
+        "Valencia": {
+            "distance": 220
+        },
+        "Albacete": {
+            "distance": 154
+        }
+    },
+    "Leon": {
+        "Salamanca": {
+            "distance": 206
+        },
+        "Valladolid": {
+            "distance": 140
+        },
+        "Burgos": {
+            "distance": 171
+        }
+    },
+    "Salamanca": {
+        "Leon": {
+            "distance": 206
+        },
+        "Toledo": {
+            "distance": 284
+        },
+        "Valladolid": {
+            "distance": 119
+        },
+        "Caceres": {
+            "distance": 207
+        }
+    },
+    "Burgos": {
+        "Leon": {
+            "distance": 171
+        },
+        "Valladolid": {
+            "distance": 131
+        },
+        "Logrono": {
+            "distance": 135
+        }
+    },
+    "Seville": {
+        "Cordoba": {
+            "distance": 139
+        },
+        "Badajoz": {
+            "distance": 212
+        }
+    },
+    "Badajoz": {
+        "Seville": {
+            "distance": 212
+        },
+        "Toledo": {
+            "distance": 364
+        },
+        "Caceres": {
+            "distance": 94
+        }
+    },
+    "Caceres": {
+        "Salamanca": {
+            "distance": 207
+        },
+        "Badajoz": {
+            "distance": 94
+        }
+    },
+    "Logrono": {
+        "Zaragoza": {
+            "distance": 167
+        },
+        "Valladolid": {
+            "distance": 139
+        },
+        "Burgos": {
+            "distance": 135
+        }
+    }
+}

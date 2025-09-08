@@ -3,15 +3,22 @@ import time
 import asyncio
 import pandas as pd
 
-geolocator = Nominatim(user_agent="spain-graph-navigator")
-upload_path = "UPLOAD_PATH"
+geolocator = Nominatim(user_agent="spain-graph-navigator", timeout=10)
+upload_path = "D:/MyNameIsSid/Notes And Lectures/AI Projects/spain-graph-navigator/Dataset/"
 country = "Spain" 
 
-def sync_geocode(city):
-    result = geolocator.geocode(city+", "+country)
-    if asyncio.iscoroutine(result):
-        return asyncio.run(result)   # force coroutine to resolve
-    return result
+def sync_geocode(city, retries = 3):
+    for attempt in range(retries):
+        try:
+            result = geolocator.geocode(f"{city}, Spain")
+            if asyncio.iscoroutine(result):
+                return asyncio.run(result)   # force coroutine to resolve
+            if result:
+                return result
+        except Exception as e:
+            print(f"Attempt {attempt+1} failed for {city}: {e}")
+            time.sleep(2)
+    return None
 
 #20 Spanish cities are considered for builing a simple search agent
 spain_city_list = [
@@ -19,7 +26,7 @@ spain_city_list = [
     "Pamplona",
     "Madrid",
     "Granada",
-    "León",        
+    "Leon",        
     "Seville",
     "Valencia",
     "Salamanca",
@@ -28,13 +35,13 @@ spain_city_list = [
     "Zaragoza",
     "Valladolid",
     "Bilbao",
-    "Córdoba",     
+    "Cordoba",     
     "Albacete",
-    "Cáceres",     
+    "Caceres",     
     "Murcia",
     "Badajoz",
     "Burgos",      
-    "Logroño"
+    "Logrono"
 ]
 
 def spain_cities_coord_gen(city_list):

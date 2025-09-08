@@ -4,6 +4,7 @@ import time
 import math
 import numpy as np 
 import pandas as pd
+import json
 
 path = "D:/MyNameIsSid/Notes And Lectures/AI Projects/spain-graph-navigator/Dataset/"
 
@@ -88,6 +89,9 @@ def main():
 
     spain_map = construct_graph(cities_of_spain,neighbours)
     graph = spain_map
+    file_path = "D:/MyNameIsSid/Notes And Lectures/AI Projects/spain-graph-navigator/Dataset/spain_graph.json"
+    with open(file_path, "w") as json_file:
+        json.dump(graph,json_file,indent=4)
     
     source = input("Enter the Start City: ")
     destination = input("Enter Destination: ")
