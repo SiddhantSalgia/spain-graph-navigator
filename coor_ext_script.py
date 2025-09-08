@@ -4,7 +4,7 @@ import asyncio
 import pandas as pd
 
 geolocator = Nominatim(user_agent="spain-graph-navigator", timeout=10)
-upload_path = "D:/MyNameIsSid/Notes And Lectures/AI Projects/spain-graph-navigator/Dataset/"
+upload_path = "/Dataset/"
 country = "Spain" 
 
 def sync_geocode(city, retries = 3):
@@ -20,7 +20,7 @@ def sync_geocode(city, retries = 3):
             time.sleep(2)
     return None
 
-#20 Spanish cities are considered for builing a simple search agent
+#20 Spanish cities are considered for building a simple search agent
 spain_city_list = [
     "Barcelona",
     "Pamplona",
